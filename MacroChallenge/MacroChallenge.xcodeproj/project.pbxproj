@@ -100,9 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				4FFB02EB25346DC80000706E /* App */,
-				4FFB02F725346E4A0000706E /* Common */,
-				4FFB02F325346E170000706E /* Data */,
-				4FFB02F225346DF00000706E /* Domain */,
 				4FFB02ED25346DD40000706E /* Presentation */,
 				4FFB02EC25346DCD0000706E /* Resources */,
 			);
@@ -161,27 +158,6 @@
 				4FFB02BE25346DA90000706E /* Main.storyboard */,
 			);
 			path = MainScene;
-			sourceTree = "<group>";
-		};
-		4FFB02F225346DF00000706E /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		4FFB02F325346E170000706E /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		4FFB02F725346E4A0000706E /* Common */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
