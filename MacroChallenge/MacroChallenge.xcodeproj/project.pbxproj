@@ -23,6 +23,9 @@
 		4FED1C0A25496D48001930C0 /* Pembayaran.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FED1C0925496D48001930C0 /* Pembayaran.storyboard */; };
 		4FED1C0F25496D5E001930C0 /* PembayaranController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED1C0E25496D5E001930C0 /* PembayaranController.swift */; };
 		4FED1C1425496D6B001930C0 /* PembayaranView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED1C1325496D6B001930C0 /* PembayaranView.swift */; };
+		4FED1C1A25496DD5001930C0 /* HasilPembayaran.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FED1C1925496DD5001930C0 /* HasilPembayaran.storyboard */; };
+		4FED1C1F25496DE9001930C0 /* HasilPembayaranView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED1C1E25496DE9001930C0 /* HasilPembayaranView.swift */; };
+		4FED1C2425496DFA001930C0 /* HasilPembayaranController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FED1C2325496DFA001930C0 /* HasilPembayaranController.swift */; };
 		4FFB02B925346DA90000706E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB02B825346DA90000706E /* AppDelegate.swift */; };
 		4FFB02BB25346DA90000706E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB02BA25346DA90000706E /* SceneDelegate.swift */; };
 		4FFB02BD25346DA90000706E /* OnBoardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB02BC25346DA90000706E /* OnBoardingController.swift */; };
@@ -67,6 +70,9 @@
 		4FED1C0925496D48001930C0 /* Pembayaran.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pembayaran.storyboard; sourceTree = "<group>"; };
 		4FED1C0E25496D5E001930C0 /* PembayaranController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PembayaranController.swift; sourceTree = "<group>"; };
 		4FED1C1325496D6B001930C0 /* PembayaranView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PembayaranView.swift; sourceTree = "<group>"; };
+		4FED1C1925496DD5001930C0 /* HasilPembayaran.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HasilPembayaran.storyboard; sourceTree = "<group>"; };
+		4FED1C1E25496DE9001930C0 /* HasilPembayaranView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasilPembayaranView.swift; sourceTree = "<group>"; };
+		4FED1C2325496DFA001930C0 /* HasilPembayaranController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasilPembayaranController.swift; sourceTree = "<group>"; };
 		4FFB02B525346DA90000706E /* MacroChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacroChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFB02B825346DA90000706E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FFB02BA25346DA90000706E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +164,16 @@
 			path = PembayaranUI;
 			sourceTree = "<group>";
 		};
+		4FED1C1825496DC4001930C0 /* HasilPembayaranUI */ = {
+			isa = PBXGroup;
+			children = (
+				4FED1C1925496DD5001930C0 /* HasilPembayaran.storyboard */,
+				4FED1C1E25496DE9001930C0 /* HasilPembayaranView.swift */,
+				4FED1C2325496DFA001930C0 /* HasilPembayaranController.swift */,
+			);
+			path = HasilPembayaranUI;
+			sourceTree = "<group>";
+		};
 		4FFB02AC25346DA80000706E = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +244,7 @@
 		4FFB02ED25346DD40000706E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				4FED1C1825496DC4001930C0 /* HasilPembayaranUI */,
 				4FED1C0825496D3C001930C0 /* PembayaranUI */,
 				4FED1BF825496CB7001930C0 /* SignInUI */,
 				4FED1BE825496C2B001930C0 /* SignUpUI */,
@@ -357,6 +374,7 @@
 				4FED1BDA25496BEA001930C0 /* JenjangAnakAsuh.storyboard in Resources */,
 				4FED1C0A25496D48001930C0 /* Pembayaran.storyboard in Resources */,
 				4FED1BD425496BBB001930C0 /* Browse.storyboard in Resources */,
+				4FED1C1A25496DD5001930C0 /* HasilPembayaran.storyboard in Resources */,
 				4FED1BFA25496CC1001930C0 /* SignIn.storyboard in Resources */,
 				4FFB02C025346DA90000706E /* OnBoarding.storyboard in Resources */,
 			);
@@ -385,6 +403,7 @@
 			files = (
 				4FED1BC725496B90001930C0 /* BrowseController.swift in Sources */,
 				4FFB02BD25346DA90000706E /* OnBoardingController.swift in Sources */,
+				4FED1C1F25496DE9001930C0 /* HasilPembayaranView.swift in Sources */,
 				4FED1BEF25496C45001930C0 /* SignUpController.swift in Sources */,
 				4F5502E02549664300DA1089 /* OnBoardingView.swift in Sources */,
 				4FED1C1425496D6B001930C0 /* PembayaranView.swift in Sources */,
@@ -397,6 +416,7 @@
 				4FED1C0425496CD9001930C0 /* SignInController.swift in Sources */,
 				4FED1BFF25496CCD001930C0 /* SignInView.swift in Sources */,
 				4FED1BE425496C04001930C0 /* JenjangAnakAsuhController.swift in Sources */,
+				4FED1C2425496DFA001930C0 /* HasilPembayaranController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

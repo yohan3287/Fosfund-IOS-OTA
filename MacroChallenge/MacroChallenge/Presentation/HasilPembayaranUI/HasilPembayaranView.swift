@@ -1,5 +1,5 @@
 //
-//  PembayaranView.swift
+//  HasilPembayaranView.swift
 //  MacroChallenge
 //
 //  Created by Arif Luthfiansyah on 28/10/20.
@@ -7,12 +7,13 @@
 
 import UIKit
 
-class PembayaranView: UIView {
+class HasilPembayaranView: UIView {
 
-    var controller: PembayaranController!
+
+    var controller: HasilPembayaranController!
 
     func viewDidLoad() {
-
+        
     }
 
     /*
