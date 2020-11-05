@@ -13,6 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+       let window = UIWindow(frame: UIScreen.main.bounds)
+        // Or "Admin"
+        window.rootViewController = UIStoryboard(name: "SignUp", bundle: nil).instantiateInitialViewController()
+        window.makeKeyAndVisible()
         // Override point for customization after application launch.
         return true
     }
