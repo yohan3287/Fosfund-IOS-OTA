@@ -40,6 +40,8 @@
 		4FFB02D025346DAB0000706E /* MacroChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB02CF25346DAB0000706E /* MacroChallengeTests.swift */; };
 		4FFB02DB25346DAB0000706E /* MacroChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB02DA25346DAB0000706E /* MacroChallengeUITests.swift */; };
 		7C52FD8125539DC800A4C1A8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52FD8025539DC800A4C1A8 /* TableViewController.swift */; };
+		7C52FD8D25545C1600A4C1A8 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52FD8C25545C1600A4C1A8 /* MainMenuController.swift */; };
+		7C52FD9525545C2B00A4C1A8 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C52FD9425545C2B00A4C1A8 /* MainMenu.storyboard */; };
 		7C979AFE25514B8100882B98 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C979AFD25514B8100882B98 /* SignUpModel.swift */; };
 		7C979B0625514ED200882B98 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C979B0525514ED200882B98 /* APIManager.swift */; };
 		7C979B0C2551543300882B98 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7C979B0B2551543300882B98 /* Alamofire */; };
@@ -103,6 +105,9 @@
 		4FFB02DA25346DAB0000706E /* MacroChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroChallengeUITests.swift; sourceTree = "<group>"; };
 		4FFB02DC25346DAB0000706E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C52FD8025539DC800A4C1A8 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		7C52FD8C25545C1600A4C1A8 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		7C52FD9425545C2B00A4C1A8 /* MainMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
+		7C52FD992554637200A4C1A8 /* MainMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainMenu.storyboard; path = MacroChallenge/Presentation/MainMenu/MainMenu.storyboard; sourceTree = "<group>"; };
 		7C979AFD25514B8100882B98 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		7C979B0525514ED200882B98 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		7CD1E90B254FF7CD00473A70 /* OnBoarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
@@ -220,6 +225,7 @@
 		4FFB02AC25346DA80000706E = {
 			isa = PBXGroup;
 			children = (
+				7C52FD992554637200A4C1A8 /* MainMenu.storyboard */,
 				4FFB02B725346DA90000706E /* MacroChallenge */,
 				4FFB02CE25346DAB0000706E /* MacroChallengeTests */,
 				4FFB02D925346DAB0000706E /* MacroChallengeUITests */,
@@ -287,6 +293,7 @@
 		4FFB02ED25346DD40000706E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7C52FD8B25545BE900A4C1A8 /* MainMenu */,
 				4FED1C3825496EF5001930C0 /* HistoryPembayaranUI */,
 				4FED1C2825496E67001930C0 /* UploadPembayaranUI */,
 				4FED1C1825496DC4001930C0 /* HasilPembayaranUI */,
@@ -308,6 +315,15 @@
 				4F5502DF2549664300DA1089 /* OnBoardingView.swift */,
 			);
 			path = OnBoardingUI;
+			sourceTree = "<group>";
+		};
+		7C52FD8B25545BE900A4C1A8 /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7C52FD8C25545C1600A4C1A8 /* MainMenuController.swift */,
+				7C52FD9425545C2B00A4C1A8 /* MainMenu.storyboard */,
+			);
+			path = MainMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +435,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C52FD9525545C2B00A4C1A8 /* MainMenu.storyboard in Resources */,
 				7CD1E90C254FF7CD00473A70 /* OnBoarding.storyboard in Resources */,
 				4FFB02C525346DAB0000706E /* LaunchScreen.storyboard in Resources */,
 				4FFB02C225346DAB0000706E /* Assets.xcassets in Resources */,
@@ -471,6 +488,7 @@
 				4FED1BF425496C51001930C0 /* SignUpView.swift in Sources */,
 				4FED1BCF25496BB2001930C0 /* BrowseView.swift in Sources */,
 				4FED1C4425496F46001930C0 /* HistoryPembayaranController.swift in Sources */,
+				7C52FD8D25545C1600A4C1A8 /* MainMenuController.swift in Sources */,
 				7C979AFE25514B8100882B98 /* SignUpModel.swift in Sources */,
 				4FFB02BB25346DA90000706E /* SceneDelegate.swift in Sources */,
 				4FED1C0425496CD9001930C0 /* SignInController.swift in Sources */,

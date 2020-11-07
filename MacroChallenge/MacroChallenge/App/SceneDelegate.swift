@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = self.navigationController
         window?.makeKeyAndVisible()
-        let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
-        let viewController = storyboard.instantiateViewController(identifier: "SignUpController")
+        let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "SignInController")
         self.navigationController.pushViewController(viewController, animated: true)
     }
 

@@ -11,15 +11,16 @@ import Foundation
 protocol TextFieldCellDelegate: class {
     
     func todo(string: String, at indexPath: IndexPath)
-
+    
 }
+
 
 class TextFieldCell: UITableViewCell {
     
     @IBOutlet weak var textField: UITextField!
     
     weak var delegate: TextFieldCellDelegate?
-   
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.textField.delegate = self
@@ -49,6 +50,7 @@ class SignUpController: UIViewController {
     
     
     
+    
     let data = [
         "Nama Lengkap",
         "Email",
@@ -56,13 +58,13 @@ class SignUpController: UIViewController {
         "Kata Sandi",
         "Tulis Ulang Kata Sandi"
     ]
-
+    
     var fullName: String?
     var email: String?
     var nomorTelp: String?
     var password: String?
     var confirmPassword: String?
-
+    
     
     override func viewDidLoad() {
         
@@ -73,27 +75,27 @@ class SignUpController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
-        let footer = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 150))
-        
-        header.backgroundColor = .white
-        footer.backgroundColor = .white
-        
-        let label = UILabel(frame: header.bounds)
-        label.text = "Buat akun baru"
-        
-        //label.text = "Silahkan mengisi data-data yang diperlukan"
-        label.textAlignment = .left
-        header.addSubview(label)
-        
-        let label2 = UILabel(frame: label.bounds)
-       // label.text = "Buat akun baru"
-        label2.text = "Silahkan mengisi data-data yang diperlukan"
-        label2.textAlignment = .left
-        header.addSubview(label2)
-        
-//        tableView.tableHeaderView = header
-//        tableView.tableFooterView = footer
+        //        let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
+        //        let footer = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 150))
+        //
+        //        header.backgroundColor = .white
+        //        footer.backgroundColor = .white
+        //
+        //        let label = UILabel(frame: header.bounds)
+        //        label.text = "Buat akun baru"
+        //
+        //        //label.text = "Silahkan mengisi data-data yang diperlukan"
+        //        label.textAlignment = .left
+        //        header.addSubview(label)
+        //
+        //        let label2 = UILabel(frame: label.bounds)
+        //       // label.text = "Buat akun baru"
+        //        label2.text = "Silahkan mengisi data-data yang diperlukan"
+        //        label2.textAlignment = .left
+        //        header.addSubview(label2)
+        //
+        ////        tableView.tableHeaderView = header
+        ////        tableView.tableFooterView = footer
         
         
     }
@@ -103,65 +105,82 @@ class SignUpController: UIViewController {
     
     @IBAction func daftarAkunTouchUpInside(_ sender: UIButton) {
         
-       register()
+        register()
+        
     }
     
-    func register(){
-        guard let fullName = self.fullName,
-              let email = self.email,
-              let nomorTelp = self.nomorTelp,
-              let password = self.password,
-              password == confirmPassword else {
-            return
-        }
-        let json: [String: Any] = ["email": email,
-                                   "password": password,
-                                   "nama": fullName,
-                                   "telepon": nomorTelp]
-
-        let jsonData = try? JSONSerialization.data(withJSONObject: json)
-
+    private func post(target: String, jsonInBody: [String: Any]){
+        let jsonData = try? JSONSerialization.data(withJSONObject: jsonInBody)
+        
         // create post request
-        let url = URL(string: "http://159.65.142.226/ota/register")!
+        let url = URL(string: target)!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         
-            let session = URLSession.shared
-            request.httpMethod = "POST"
-
+        let session = URLSession.shared
+        request.httpMethod = "POST"
+        
+        do {
+            request.httpBody = jsonData
+        } catch let error {
+            print(error.localizedDescription)
+            
+        }
+        
+        //HTTP Headers
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        //create dataTask using the session object to send data to the server
+        let task = session.dataTask(with: request, completionHandler: { data, response, error in
+            guard error == nil else {
+                return
+            }
+            
+            guard let data = data else {
+                return
+            }
+            
             do {
-                request.httpBody = jsonData
+                //create json object from data
+                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {
+                    return
+                }
+                print(json)
             } catch let error {
                 print(error.localizedDescription)
-               
             }
-
-            //HTTP Headers
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.addValue("application/json", forHTTPHeaderField: "Accept")
-
-            //create dataTask using the session object to send data to the server
-            let task = session.dataTask(with: request, completionHandler: { data, response, error in
-                guard error == nil else {
-                    return
-                }
-
-                guard let data = data else {
-                    return
-                }
-
-                do {
-                    //create json object from data
-                    guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else {
-                        return
-                    }
-                    print(json)
-                } catch let error {
-                    print(error.localizedDescription)
-                }
-            })
-
-            task.resume()
+        })
+        
+        task.resume()
+    }
+    
+    
+    func register(){
+//        guard let fullName = self.fullName,
+//              let email = self.email,
+//              let nomorTelp = self.nomorTelp,
+//              let password = self.password,
+//              password == confirmPassword else {
+//            return
+//        }
+//        let json: [String: Any] = ["email": email,
+//                                   "password": password,
+//                                   "nama": fullName,
+//                                   "telepon": nomorTelp]
+        
+        let json: [String: Any] = [
+            "grant_type": "passwordd",
+            "scope": "*",
+            "client_id": "3",
+            "client_secret": "IKthG5cI1GyzDqlR01I3Yr8R55u4FrwwM5q5RotZ",
+            "email": "handy@email.com",
+            "password": "secret"
+        ]
+        
+//        post(target: "http://159.65.142.226/ota/register", jsonInBody: json)
+        post(target: "http://159.65.142.226/api/v1/oauth/token", jsonInBody: json)
+        
     }
     
 }
