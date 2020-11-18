@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,20 +11,75 @@
         <!--Upload Pembayaran Controller-->
         <scene sceneID="SEu-pa-VpG">
             <objects>
-                <viewController id="qpJ-3Y-46e" customClass="UploadPembayaranController" customModule="MacroChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UploadPembayaranController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qpJ-3Y-46e" customClass="UploadPembayaranController" customModule="MacroChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mM1-uu-T8w" customClass="UploadPembayaranView" customModule="MacroChallenge" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="349-tq-nQS">
+                                <rect key="frame" x="35" y="141" width="318" height="464"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A6x-jC-fDQ">
+                                        <rect key="frame" x="8" y="0.0" width="302" height="456"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <imageView key="tableFooterView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1Fu-47-IIX">
+                                            <rect key="frame" x="0.0" y="99.5" width="302" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="rgl-Iz-M9d">
+                                                <rect key="frame" x="0.0" y="28" width="302" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rgl-Iz-M9d" id="9IB-E7-zJ9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="302" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="qpJ-3Y-46e" id="oiF-tO-Haj"/>
+                                            <outlet property="delegate" destination="qpJ-3Y-46e" id="sl6-dt-rxx"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8De-hf-NzM">
+                                <rect key="frame" x="170" y="724" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="buttonUpload:" destination="qpJ-3Y-46e" eventType="touchUpInside" id="82A-A0-YYk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJf-yK-J0r">
+                                <rect key="frame" x="64" y="658" width="260" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.12941176470588234" green="0.38039215686274508" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Unggah Bukti Pembayaran"/>
+                                <connections>
+                                    <action selector="unggahBuktiPembayaran:" destination="qpJ-3Y-46e" eventType="touchUpInside" id="WLt-mw-Hlk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="AHl-6l-C9A"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="uploadPembayaranView" destination="mM1-uu-T8w" id="tsO-IW-whW"/>
+                        <outlet property="UploadPembayaranTableView" destination="A6x-jC-fDQ" id="EHW-B2-UeP"/>
+                        <outlet property="ViewUploadPembayaran" destination="349-tq-nQS" id="v8g-GZ-1VV"/>
+                        <outlet property="imageView" destination="1Fu-47-IIX" id="GXF-M9-pFa"/>
+                        <outlet property="unggahBuktiPembayaran" destination="MJf-yK-J0r" id="bve-II-3aI"/>
+                        <outlet property="uploadPembayaranView" destination="mM1-uu-T8w" id="28T-V6-n1Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGy-ol-joJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="119"/>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
     </scenes>
     <resources>

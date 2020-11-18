@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = self.navigationController
         window?.makeKeyAndVisible()
-        let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
-        let viewController = storyboard.instantiateViewController(identifier: "SignInController")
+        let storyboard = UIStoryboard(name: "UploadPembayaran", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "UploadPembayaranController")
         self.navigationController.pushViewController(viewController, animated: true)
     }
 

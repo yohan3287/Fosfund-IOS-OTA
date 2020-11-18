@@ -42,6 +42,9 @@
 		7C52FD8125539DC800A4C1A8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52FD8025539DC800A4C1A8 /* TableViewController.swift */; };
 		7C52FD8D25545C1600A4C1A8 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C52FD8C25545C1600A4C1A8 /* MainMenuController.swift */; };
 		7C52FD9525545C2B00A4C1A8 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C52FD9425545C2B00A4C1A8 /* MainMenu.storyboard */; };
+		7C71E787255BEFAD00E5B5F9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C71E786255BEFAD00E5B5F9 /* ImagePicker.swift */; };
+		7C71E79F255C660900E5B5F9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C71E79E255C660900E5B5F9 /* Profile.storyboard */; };
+		7C71E7A4255C662000E5B5F9 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C71E7A3255C662000E5B5F9 /* ProfileController.swift */; };
 		7C979AFE25514B8100882B98 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C979AFD25514B8100882B98 /* SignUpModel.swift */; };
 		7C979B0625514ED200882B98 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C979B0525514ED200882B98 /* APIManager.swift */; };
 		7C979B0C2551543300882B98 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7C979B0B2551543300882B98 /* Alamofire */; };
@@ -108,6 +111,9 @@
 		7C52FD8C25545C1600A4C1A8 /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 		7C52FD9425545C2B00A4C1A8 /* MainMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
 		7C52FD992554637200A4C1A8 /* MainMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MainMenu.storyboard; path = MacroChallenge/Presentation/MainMenu/MainMenu.storyboard; sourceTree = "<group>"; };
+		7C71E786255BEFAD00E5B5F9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		7C71E79E255C660900E5B5F9 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		7C71E7A3255C662000E5B5F9 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		7C979AFD25514B8100882B98 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		7C979B0525514ED200882B98 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		7CD1E90B254FF7CD00473A70 /* OnBoarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
@@ -208,6 +214,7 @@
 				4FED1C2925496E79001930C0 /* UploadPembayaran.storyboard */,
 				4FED1C2E25496E84001930C0 /* UploadPembayaranController.swift */,
 				4FED1C3325496E96001930C0 /* UploadPembayaranView.swift */,
+				7C71E786255BEFAD00E5B5F9 /* ImagePicker.swift */,
 			);
 			path = UploadPembayaranUI;
 			sourceTree = "<group>";
@@ -293,6 +300,7 @@
 		4FFB02ED25346DD40000706E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7C71E79D255C65D000E5B5F9 /* ProfileUI */,
 				7C52FD8B25545BE900A4C1A8 /* MainMenu */,
 				4FED1C3825496EF5001930C0 /* HistoryPembayaranUI */,
 				4FED1C2825496E67001930C0 /* UploadPembayaranUI */,
@@ -324,6 +332,15 @@
 				7C52FD9425545C2B00A4C1A8 /* MainMenu.storyboard */,
 			);
 			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		7C71E79D255C65D000E5B5F9 /* ProfileUI */ = {
+			isa = PBXGroup;
+			children = (
+				7C71E79E255C660900E5B5F9 /* Profile.storyboard */,
+				7C71E7A3255C662000E5B5F9 /* ProfileController.swift */,
+			);
+			path = ProfileUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +457,7 @@
 				4FFB02C525346DAB0000706E /* LaunchScreen.storyboard in Resources */,
 				4FFB02C225346DAB0000706E /* Assets.xcassets in Resources */,
 				4FED1BEA25496C3B001930C0 /* SignUp.storyboard in Resources */,
+				7C71E79F255C660900E5B5F9 /* Profile.storyboard in Resources */,
 				4FED1BDA25496BEA001930C0 /* JenjangAnakAsuh.storyboard in Resources */,
 				4FED1C0A25496D48001930C0 /* Pembayaran.storyboard in Resources */,
 				4FED1C3A25496F19001930C0 /* HistoryPembayaran.storyboard in Resources */,
@@ -473,8 +491,10 @@
 			files = (
 				7C52FD8125539DC800A4C1A8 /* TableViewController.swift in Sources */,
 				4FED1BC725496B90001930C0 /* BrowseController.swift in Sources */,
+				7C71E787255BEFAD00E5B5F9 /* ImagePicker.swift in Sources */,
 				4FFB02BD25346DA90000706E /* OnBoardingController.swift in Sources */,
 				4FED1C1F25496DE9001930C0 /* HasilPembayaranView.swift in Sources */,
+				7C71E7A4255C662000E5B5F9 /* ProfileController.swift in Sources */,
 				4FED1C2F25496E84001930C0 /* UploadPembayaranController.swift in Sources */,
 				7C979B0625514ED200882B98 /* APIManager.swift in Sources */,
 				4FED1C3F25496F33001930C0 /* HistoryPembayaranView.swift in Sources */,
